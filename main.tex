@@ -1,0 +1,879 @@
+\documentclass[twocolumn, fontsize=8pt, DIV=1]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{todonotes}
+\usepackage[top=0.2cm, bottom=0.2cm, left=.2cm, right=.2cm]{geometry}
+
+% Deutsche Anpassungen/Übersetzungen einbinden 
+\usepackage[ngerman]{babel}
+
+% Einzug der jeweils ersten Zeile verhindern
+\setlength{\parindent}{0em}
+
+\title{GDF Fragen}
+\subtitle{Sommersemester 2018}
+\author{GDF-Crew}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+\section{Tensorrechnung}
+
+
+
+
+\begin{framed}
+    Ko- bzw. kontravariante Basen
+\end{framed}
+Kovariante Basis unten, kontravariante Basis oben:
+\[ \underline{g}_{i}\ \underline{g}^{j} = \delta_i^j = E \]
+
+Vektor kann geschrieben werden:
+\[ 
+ \underline{v} = v^i \ \underline{g}_i = v_i \ \underline{g}^i 
+\]
+
+Die Länge von Vektoren und Winkeln zwischen Vektoren hängen nicht vom gewählten Basissystem ab (Invariante). Daher müssen bei schiefwinkligen Koordinatensystemen zur Berechnung des Skalarproduktes außer den Komponenten die zugehörigen Basisvektoren einbezogen werden.\\
+\ \\
+Mit $\underline{v} = v^i \ \underline{g}_i$ und $\underline{u} = u^j\ \underline{g}_j$:
+\[
+\underline{v} \cdot \underline{u} = v^i \ \underline{g}_i \cdot u^j\ \underline{g}_j
+%= v^i\, u^j\ \underline{g}_i \cdot \underline{g}_j 
+= v^i\, u^j\, g_{ij}
+= v_i\, u_j\, g^{ij}
+= v_i\, u^j\, g^i_j
+= v_i\, u^j\, \delta^i_j
+= v_i\, u^j
+\]
+Kovarianter Metriktensor: \[g_{ij}\]
+Kontravarianter Metriktensor: \[g^{ij}\]
+Gemischter Metriktensor: \[\delta^i_j = g^i_j\]
+
+
+
+\begin{framed}
+    Multiplikation, Überschiebung, Verjüngung
+\end{framed}
+Addition:
+\[
+    C_i = A_i + B_i
+\]
+Skalare Multiplikation:
+\[
+    B_i = a\, A_i
+\]
+Multiplikation:
+\[
+    C_{ik} = A_i\, B_k
+\]
+Einsteinsche Summenkonvention:
+\[
+    A^i\, B_i\ \hat{=}\ \sum_{i=1}^n A^i\, B_i
+    \qquad\qquad\qquad
+    A^i_i\ \hat{=}\ \sum_{i=1}^n A^i_i
+\]
+Überschiebung (bedeutet z.B. Skalarprodukt, Matrizenprodukt, $\dots$):
+\[
+    a = B_i\, C^i
+    \qquad
+    A_{ik} = B_i^j\, C_{jk}
+    \qquad
+    A_{ikl} = B_i^j\, C_{jkl}
+\]
+Verjüngung (Stufe des Tensors wird um 2 herabgesetzt):
+\[
+    A^i_i = A^1_1 + \dots + A^n_n = a \qquad \text{Spur einer Matrix}
+\]
+\[
+    A^i_{ijk} = A^1_{1jk} + \dots + A^n_{njk} = B_{jk}
+\]
+
+
+
+\begin{framed}
+    Transformationsverhalten Tensoren
+\end{framed}
+\todo[inline]{Transformationsverhalten Tensoren}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Beispiele für Tensoren
+\end{framed}
+\todo[inline]{Beispiele für Tensoren}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+
+
+
+
+
+
+\section{Kurventheorie}
+
+
+
+\begin{framed}
+    Wie werden Kurven parametrisiert?
+\end{framed}
+
+Vektorwertige Funktion:
+\[
+\underline{X} : \  I \in \mathbb{R} \to \mathbb{R}^3, \qquad 
+\underline{X}(t) =
+ \left(
+ \begin{array}{c}
+ x_1(t)\\
+ x_2(t)\\
+ x_3(t)
+ \end{array}
+\right) 
+\]
+
+
+
+\begin{framed}
+    Was zeichnet Bogenlängenparametrisierung aus?
+\end{framed}
+
+\[
+|\underline{X}'| = 1
+\]
+Der Parameter gibt gleichzeitig die Bogenlänge von $0$ bis $s$ an.
+
+
+
+\begin{framed}
+    Was ist das begleitende Dreibein einer Kurve? Aus welchen Vektoren besteht es?
+\end{framed}
+Bei Bogelängenparametrisierung: lokales, orthogonales Koordinatensystem.\\
+\\
+Tangentenvektor:
+\[
+    \underline{v}_1 = \underline{X}'
+\]
+Hauptnormalenvektor:
+\[
+    \underline{v}_2 = \frac{\underline{X}''}{||\underline{X}''||}
+\]
+Binormalenvektor:
+\[
+    \underline{v}_3 = \underline{v}_1 \times \underline{v}_2
+\]
+$\underline{v}_2$ zeigt in die Richtung des Krümmungskreismittelpunktes.
+
+
+
+\begin{framed}
+    Was bedeutet Bogenlänge und wie wird sie berechnet?
+\end{framed}
+Länge eines Stückchens Kurve.
+\[
+    s(t) = \int_{t_0}^t ||\underline{\dot{X}}(\tau)||\, d\tau
+\]
+
+
+
+\begin{framed}
+    Was bedeutet Krümmung und wie wird sie berechnet?
+\end{framed}
+Die Krümmung in einem Kurvenpunkt entspricht der Krümmung des Schmiegkreises. 
+Bei Bogenlängenparametrisierung:
+\[
+    \kappa(s) = ||\underline{\ddot{X}}(s)||
+\]
+
+
+
+\begin{framed}
+    Was bedeutet Torsion und wie wird sie berechnet?
+\end{framed}
+Die Torsion beschreibt, wie stark sich die Kurve aus der Schmiegebene herauswindet.
+\[
+    \tau(t) = \frac{\det(\underline{\dot{X}}(t), \underline{\ddot{X}}(t), \underline{\dddot{X}}(t))}{||\underline{\dot{X}}(t) \times \underline{\ddot{X}}(t)||^2}
+\]
+
+
+
+\begin{framed}
+    Was ist an Bogenlänge, Krümmung und Torsion besonders?
+\end{framed}
+\begin{itemize}
+    \item sind geometrische Invarianten
+    \item hängen nicht von der mathematischen Beschreibung der Kurve ab
+    \item Kurve ist bis auf Bewegungen im Raum durch diese 3 Größen eindeutig bestimmt
+\end{itemize}
+
+
+
+\begin{framed}
+    Wann ist eine Kurve eben?
+\end{framed}
+Wenn die Torsion $0$ ist.
+
+
+
+\begin{framed}
+    Welchen Zusammenhang beschreiben die Frenet-Formeln und welche Größen kommen darin vor?
+\end{framed}
+Es sind Differentialgleichungen, die die Änderung des Dreibeins angeben.
+\begin{itemize}
+    \item Die Vektoren des Dreibeins
+    \item Krümmung $\kappa$
+    \item Torsion $\tau$
+\end{itemize}
+
+
+
+\begin{framed}
+    Wie heißen die Ebenen, die von den Vektoren des begleitenden Dreibeins aufgespannt werden?
+\end{framed}
+Schmiegebene:
+\[
+    \underline{v}_1,\ \underline{v}_2
+\]
+Rektifizierende Ebene:
+\[
+    \underline{v}_1,\ \underline{v}_3
+\]
+Normalebene:
+\[
+    \underline{v}_2,\ \underline{v}_3
+\]
+
+
+
+\begin{framed}
+    Wohin zeigt der Hauptnormalenvektor einer Kurve?
+\end{framed}
+In Richtung Krümmungskreismittelpunkt
+
+
+
+
+
+
+
+
+
+
+\section{Flächentheorie}
+
+
+
+\begin{framed}
+    Wie werden Flächen parametrisiert?
+\end{framed}
+
+Vektorwertige Funktion:
+\[
+\underline{X}: \quad G \in \mathbb{R}^2 \to \mathbb{R}^3, \qquad 
+\underline{X}(u^1, u^2) =
+ \left(
+ \begin{array}{c}
+ x_1(u^1, u^2)\\
+ x_2(u^1, u^2)\\
+ x_3(u^1, u^2)
+ \end{array}
+\right) 
+\]
+
+
+
+\begin{framed}
+    Wann heißt eine Punktmenge $\underline{X}(u^1, u^2)$ reguläres Flächenstück?
+\end{framed}
+\begin{itemize}
+    \item $\underline{X}$ injektiv (keine Selbstüberschneidungen
+    \item $\underline{X}_1 \times \underline{X}_2 \neq \underline{0}\ \ \ \forall\ (u^1, u^2) \in G$
+    \item $\underline{X} \in C^3$
+\end{itemize}
+
+
+
+\begin{framed}
+    Wann heißt eine Parametertransformation bei Flächen zulässig?
+\end{framed}
+\todo[inline]{Nochmal genau checken; Was sind Abbildungen $u^1, u^2 \in C^3$; Funktionaldeterminante aufschreiben können?}
+\begin{itemize}
+    \item Funktionaldeterminante $\neq 0$
+    \item $u^1, u^2 \in C^3$
+\end{itemize}
+
+
+
+\begin{framed}
+    Wie berechnet man die Tangentialebene und was bedeutet sie?
+\end{framed}
+Analog zur Tangente bei Kurven berührt die Ebene die gegebene Fläche tangential. Voraussetzung ist, dass eine Flächennormale existiert.
+\[
+    T(\mu_1, \mu_2) = \underline{X}(u^1_0, u^2_0) + \mu_1 \underline{X}_1(u^1_0, u^2_0) + \mu_2 \underline{X}_2(u^1_0, u^2_0),
+    \qquad \mu_i \in \mathbb{R}
+\]
+
+
+\begin{framed}
+    Wie berechnet man die Flächennormale und was bedeutet sie?
+\end{framed}
+Die Flächennormale steht orthogonal auf der Tangentialebene. In regulären Flächenstücken ist $\underline{N} \neq 0$.
+\[
+    \underline{N}(u^1_0, u^2_0) = \frac{\underline{X}_1(u^1_0, u^2_0) \times \underline{X}_2(u^1_0, u^2_0)}{||\underline{X}_1(u^1_0, u^2_0) \times \underline{X}_2(u^1_0, u^2_0)||}
+    \qquad \qquad
+    \underline{N} = \frac{\underline{X}_1 \times \underline{X}_2}{||\underline{X}_1 \times \underline{X}_2||}
+\]
+
+
+\begin{framed}
+    Was bedeutet orientierbar?
+\end{framed}
+Die Richtungsänderung der Normalen von Punkt zu Nachbarpunkt ist stetig.\\
+\\
+Gegenbeispiele: Möbiusband, Kleinsche Flasche
+
+
+
+\begin{framed}
+    Wie werden die 1. Fundamentalgrößen berechnet?
+\end{framed}
+Antwort
+\[
+    g_{ik} =
+        \left(
+            \begin{array}{rr}
+                g_{11} & g_{12} \\
+                g_{21} & g_{22}
+            \end{array}
+        \right) =
+        \left(
+            \begin{array}{rr}
+                \langle \underline{X}_1, \underline{X}_1 \rangle & \langle \underline{X}_1, \underline{X}_2 \rangle \\
+                \langle \underline{X}_2, \underline{X}_1 \rangle & \langle \underline{X}_2, \underline{X}_2 \rangle
+            \end{array}
+        \right)
+        , \qquad \text{mit}\ g_{12} = g_{21}
+\]
+
+
+
+\begin{framed}
+    Was kann man mit den 1. Fundamentalgrößen ausrechnen?
+\end{framed}
+\begin{itemize}
+    \item Flächen von und Winkel zwischen Flächenkurven
+    \item Gauß-Krümmung $K = \kappa_1 \cdot \kappa_2$
+\end{itemize}
+
+
+
+\begin{framed}
+    Wann ist ein Parametersystem orthogonal?
+\end{framed}
+Wenn die partiellen Ableitungen orthogonal zueinander sind:
+\[
+    g_{12} = g_{21} = 0
+\]
+
+
+
+\begin{framed}
+    Wie werden die 2. Fundamentalgrößen berechnet?
+\end{framed}
+Skalarprodukte aller 2. partiellen Ableitungen mit $\underline{N}$:
+\[
+    L_{ik} =
+        \left(
+            \begin{array}{rr}
+                \langle \underline{X}_{11}, \underline{N} \rangle & \langle \underline{X}_{12}, \underline{N} \rangle \\
+                \langle \underline{X}_{21}, \underline{N} \rangle & \langle \underline{X}_{22}, \underline{N} \rangle
+            \end{array}
+        \right)
+\]
+
+
+
+\begin{framed}
+    Was ist das begleitende Dreibein der Fläche?
+\end{framed}
+Tangentenvektor in $u^1$-Richtung:
+\[
+    \underline{X}_1
+\]
+Tangentenvektor in $u^2$-Richtung:
+\[
+    \underline{X}_2
+\]
+Normalenvektor:
+\[
+    \underline{N}
+\]
+
+
+
+\begin{framed}
+    Was ist die Normalkrümmung?
+\end{framed}
+Die Normalkrümmung einer Flächenkurve in einem Flächenpunkt $\underline{P}$ ist betragsmäßig gleich der Krümmung der sie in $\underline{P}$ berührenden ebenen Normalschnittes. \textbf{Achtung:} Der Normalschnitt benötigt eine Richtung!
+\todo[inline]{Wenn der Normalschnitt eine Richtung braucht, wie kann man dann \textbf{einen} Wert für \textbf{die} Normalkrümmung berechnen?}
+\[
+    \kappa_n = \frac{II}{I}
+\]
+
+
+
+\begin{framed}
+    Was ist die geodätische Krümmung?
+\end{framed}
+Die innere Krümmung/Geometrie.
+\todo[inline]{Was ist die geodätische Krümmung?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Haben alle Flächenkurven mit gleicher Tangente in einem gemeinsamen Punkt auch gleiche Normalkrümmung?
+\end{framed}
+Ja, Satz von Meusnier.
+
+
+
+\begin{framed}
+    Was ist und wie entsteht ein Normalschnitt?
+\end{framed}
+Beim Normalschnitt ist der Normalenvektor der Fläche linear abhängig mit dem Hauptnormalenvektor der Flächenkurve. Es gilt:
+\[
+    \underline{N} = \pm \underline{v}_2
+\]
+
+
+
+\begin{framed}
+    Wie hängt die Normalkrümmung mit der 1. und, 2. Fundamentalform zusammen?
+\end{framed}
+\vspace{-1em}
+\[
+    \kappa_n = \frac{II}{I}
+\]
+
+
+
+\begin{framed}
+    Was ist die Meusnier-Kugel?
+\end{framed}
+\todo[inline]{Nochmal genau checken was Normalschnitte und was Schiefschnitte sind.}
+\begin{enumerate}
+    \item Schiefschnitte (alle)
+    \item Es entstehen Krümmungskreise
+    \item Mit Krümmungskreisen ist die Meusier-Kugel definiert
+\end{enumerate}
+Der Krümmungskreis des Normalschnittes ist Großkreis der Meusnier-Kugel.
+
+
+
+\begin{framed}
+    Was sind Hauptkrümmungen, Hauptkrümmungsrichtungen?
+\end{framed}
+Die Hauptkrümmungen $H$ sind die Extremwerte der Normalkrümmung.
+\[
+    \kappa_{1,2} = H \pm \sqrt{H^2 - K}
+\]
+\todo[inline]{Beschreibung Hauptkrümmungsrichtungen, wie berechnet man sie?}
+
+
+
+\begin{framed}
+    Wie berechnet man die Gaußsche Krümmung und mittlere Krümmung?
+\end{framed}
+Gaußsche Krümmung:
+\[
+    K = \kappa_1 \cdot \kappa_2
+\]
+Mittlere Krümmung:
+\[
+    H = \frac{\kappa_1 + \kappa_2}{2}
+\]
+
+
+
+\begin{framed}
+    Charakterisierung der Flächenpunkte: Elliptisch, hyperbolisch, parabolisch
+\end{framed}
+Elliptischer Flächenpunkt:
+\[
+    K = \kappa_1 \cdot \kappa_2 > 0
+\]
+Hyperbolischer Flächenpunkt:
+\[
+    K = \kappa_1 \cdot \kappa_2 < 0
+\]
+Parabolischer Flächenpunkt (mind. eine Hauptkrümmung ist $0$):
+\[
+    K = \kappa_1 \cdot \kappa_2 = 0
+\]
+
+
+
+\begin{framed}
+    Was ist die Dupinsche Indikatrix?
+\end{framed}
+\todo[inline]{WTF ist die Dupinsche Indikatrix?}
+Die zu einer beliebigen Richtung gehörende Normalkrümmung lässt sich durch die Hauptkrümmungen ausdrücken:
+\textit{Zu einem Flächenpunkt, der weder Nabel- noch Flachpunkt ist, gilt für die Normalkrümmung $\kappa_n$ einer Flächenkurve, deren Tangente einen Winkel zur ersten Hauptkrümmungsrichtung hat:}
+\[
+    \kappa_n = \kappa_1\, \cos^2 \varphi + \kappa_2\, \sin^2 \varphi
+\]
+Mit $z_1 = \frac{\cos\varphi}{\sqrt{\kappa_n}}$ und $z_2 = \frac{\sin\varphi}{\sqrt{\kappa_n}}$ erhalten wir die Gleichung der Dupinschen Indikatrix:
+\[
+    \kappa_1\, z_1^2 + \kappa_2\, z_2^2 = \pm 1
+\]
+\todo[inline]{Vor Formel 3.42 im Skript ist wohl Copy-Paste-Fehler...}
+
+
+\begin{framed}
+    Was sind Krümmungslinien?
+\end{framed}
+Eine Flächenkurve, deren Tangente in jedem Punkt in eine der beiden Hauptkrümmungsrichtungen zeigt.\\
+\\
+Auf einem regulären Flächenstück sind die Linien $u^1 = \text{const}$ und $u^2 = \text{const}$ genau dann Krümmungslinien, wenn:
+\[
+    g_{12} = L_{12} = 0
+\]
+Bei Rotationsflächen sind die Krümmungslinien die Meridiane und die Breitenkreise.
+
+
+
+\begin{framed}
+    Wann sind die Parameterlinien Krümmungslinien?
+\end{framed}
+Wenn:
+\[
+    g_{12} = L_{12} = 0
+\]
+
+
+\begin{framed}
+    Was ist ein Flachpunkt?
+\end{framed}
+Hauptkrümmungen sind $0\ \Rightarrow$ alle Richtungen sind Hauptkrümmungsrichtungen, z.B. bei Ebene.
+\[
+    \kappa_1 = \kappa_2 = 0
+\]
+
+
+
+\begin{framed}
+    Was ist ein Nabelpunkt?
+\end{framed}
+Alle Richtungen sind Hauptkrümmungsrichtungen.
+\[
+    \kappa_1 = \kappa_2
+\]
+
+
+
+\begin{framed}
+    Welche Fläche hat nur elliptische Flächenpunkte?
+\end{framed}
+Oberfläche der Kugel
+
+
+
+\begin{framed}
+    Wie lautet die 1. Fundamentalform?
+\end{framed}
+\[
+    I: \ ds^2 = g_{ik}\, du^i\, du^k
+\]
+
+
+
+\begin{framed}
+    Was sind Asymptotenlinien?
+\end{framed}
+\todo[inline]{Was sind Asymptotenlinien?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Wie werden Asymptotenlinien berechnet?
+\end{framed}
+\[
+    L_{ik}\,\dot{u}^i\,\dot{u}^k = 0 \qquad \text{(DGL)}
+\]
+
+
+
+\begin{framed}
+    Was ist die Normalkrümmung einer Asymptotenlinie?
+\end{framed}
+\todo[inline]{Was ist die Normalkrümmung einer Asymptotenlinie?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Wann sind Parameterlinien Asymptotenlinien?
+\end{framed}
+\todo[inline]{Wann sind Parameterlinien Asymptotenlinien?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Wie bekommt man geodätische Linien, kürzeste Wege auf Flächen?
+\end{framed}
+\todo[inline]{Wie bekommt man geodätische Linien, kürzeste Wege auf Flächen?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Wann erhalte ich den kürzesten Weg?
+\end{framed}
+Geodätische Krümmung $= 0$
+
+
+
+\begin{framed}
+    Wie bekommt man die geodätischen Linien?
+\end{framed}
+Gleichung (3.48)
+\todo[inline]{Wie bekommt man die geodätischen Linien?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    $ds$, was ist das?
+\end{framed}
+Ein infitessimal kleines Kurvenstück
+
+
+
+
+
+
+
+
+
+
+
+\section{Ableitungsgleichungen}
+
+
+\begin{framed}
+    Gibt es immer zu zulässig vorgegebenen $g_ik$ und $L_ik$ ein Flächenstück?
+\end{framed}
+Antwort
+\todo[inline]{Gibt es immer zu zulässig vorgegebenen $g_ik$ und $L_ik$ ein Flächenstück?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Welche Größen setzen die Ableitungsgleichungen von Gauß in Beziehung?
+\end{framed}
+Antwort
+\todo[inline]{Welche Größen setzen die Ableitungsgleichungen von Gauß in Beziehung?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Aus welchen Größen lassen sich die Christoffel-Symbole berechnen?
+\end{framed}
+Antwort
+\todo[inline]{Aus welchen Größen lassen sich die Christoffel-Symbole berechnen?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    WTF sind Christoffel-Symbole?
+\end{framed}
+Antwort
+\todo[inline]{WTF sind Christoffel-Symbole?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Welche Größen setzen die Ableitungsgleichungen von Weingarten in Beziehung?
+\end{framed}
+Antwort
+\todo[inline]{Welche Größen setzen die Ableitungsgleichungen von Weingarten in Beziehung?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Verträglichkeitsbedingungen von Gauß und Mainardi Codazzi: Wenn sie erfüllt sind, was hat das zur Folge?
+\end{framed}
+Antwort
+\todo[inline]{Verträglichkeitsbedingungen von Gauß und Mainardi Codazzi: Wenn sie erfüllt sind, was hat das zur Folge?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Welche Größen stecken im Riemannschen Krümmungstensor?
+\end{framed}
+Antwort
+\todo[inline]{Welche Größen stecken im Riemannschen Krümmungstensor?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Was sagt uns das Theorema Egregium von Gauß?
+\end{framed}
+Antwort
+\todo[inline]{Was sagt uns das Theorema Egregium von Gauß?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+
+
+
+
+
+
+
+
+\section{Spezielle Flächen: Regelflächen}
+
+
+
+\begin{framed}
+    Wie lautet die Parametrisierung einer Regelfläche?
+\end{framed}
+Antwort
+\todo[inline]{Wie lautet die Parametrisierung einer Regelfläche?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Was ist eine Leitkurve, was sind Erzeugende?
+\end{framed}
+Antwort
+\todo[inline]{Was ist eine Leitkurve, was sind Erzeugende?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Wodurch unterscheiden sich Torsen von windschiefen Regelflächen?
+\end{framed}
+Antwort
+\todo[inline]{Wodurch unterscheiden sich Torsen von windschiefen Regelflächen?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Welche Eigenschaften haben Striktionspunkte, Striktionslinie?
+\end{framed}
+Antwort
+\todo[inline]{Welche Eigenschaften haben Striktionspunkte, Striktionslinie?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Aus welchen Vektoren besteht das begleitende Dreibein einer Regelfläche?
+\end{framed}
+Antwort
+\todo[inline]{Aus welchen Vektoren besteht das begleitende Dreibein einer Regelfläche?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\section*{Kopiervorlage}
+
+\begin{framed}
+    Frage
+\end{framed}
+Antwort
+\todo[inline]{TODO}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    Frage
+\end{framed}
+Antwort
+\todo[inline]{TODO}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\listoftodos
+
+
+\end{document}
