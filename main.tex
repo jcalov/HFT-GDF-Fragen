@@ -18,8 +18,8 @@
 
 \title{GDF Fragen}
 \subtitle{Sommersemester 2018}
-\author{Nachos con queso \& GDF-Crew}
-\date{}
+\author{GDF-Crew}
+\date{\today}
 
 
 \begin{document}
@@ -238,10 +238,9 @@ Wenn die Torsion $0$ ist.
 \begin{framed}
     Welchen Zusammenhang beschreiben die Frenet-Formeln und welche Größen kommen darin vor?
 \end{framed}
-Es sind Differentialgleichungen, die die Änderung des Dreibeins angeben, also den Zusammenhang zwischen den Vektoren des Frenet-Dreibeins und deren Ableitungen.
+Es sind Differentialgleichungen, die die Änderung des Dreibeins angeben.
 \begin{itemize}
     \item Die Vektoren des Dreibeins
-    \item Die Ableitungen der Vektoren des Dreibeins
     \item Krümmung $\kappa$
     \item Torsion $\tau$
 \end{itemize}
@@ -436,20 +435,21 @@ Normalenvektor:
     Was ist die Normalkrümmung?
 \end{framed}
 Die Normalkrümmung einer Flächenkurve in einem Flächenpunkt $\underline{P}$ ist betragsmäßig gleich der Krümmung der sie in $\underline{P}$ berührenden ebenen Normalschnittes. \textbf{Achtung:} Der Normalschnitt benötigt eine Richtung!
+\todo[inline]{Wenn der Normalschnitt eine Richtung braucht, wie kann man dann \textbf{einen} Wert für \textbf{die} Normalkrümmung berechnen?}
 \[
     \kappa_n = \frac{II}{I}
 \]
-Die Richtung ist in den Fundamentalformen mit drin ($du^i, du^k$).
+
 
 
 \begin{framed}
     Was ist die geodätische Krümmung?
 \end{framed}
-Krümmung der Flächenkurve kann in zwei Anteile zerlegt werden: In Richtung der Flächennormalen (Normalkrümmung) und in Richtung des \glqq Seitenvektors\grqq\ $\underline{S} = \underline{N} \times \underline{X}'$ (geodätische Krümmung). \textbf{Achtung:} Für die geodätische Krümmung benötigen wir auch eine Richtung ($\underline{X}'$ ist auf eine Flächenkurve bezogen)!\\
-\\
-Die geodätische Krümmung gibt also an, wie ich \textbf{in} der Fläche gekrümmt laufe (innere Krümmung/Geometrie).\\
-\\
-Kürzeste Wege von einem Flächenpunkt zu einem anderen zeichnen sich so aus, dass die geodätische Krümmung $0$ ist.
+Die innere Krümmung/Geometrie.
+\todo[inline]{Was ist die geodätische Krümmung?}
+\[
+    e^{i\pi} + 1 = 0
+\]
 
 
 
@@ -483,10 +483,11 @@ Beim Normalschnitt ist der Normalenvektor der Fläche linear abhängig mit dem H
 \begin{framed}
     Was ist die Meusnier-Kugel?
 \end{framed}
+\todo[inline]{Nochmal genau checken was Normalschnitte und was Schiefschnitte sind.}
 \begin{enumerate}
-    \item Alle Schiefschnitte bilden (Schnittebenen aufgespannt durch: Richtungsvektor und alle dazu orthogonalen Vektoren)
+    \item Schiefschnitte (alle)
     \item Es entstehen Krümmungskreise
-    \item Mit Krümmungskreisen ist die Meusier-Kugel vollständig definiert
+    \item Mit Krümmungskreisen ist die Meusier-Kugel definiert
 \end{enumerate}
 Der Krümmungskreis des Normalschnittes ist Großkreis der Meusnier-Kugel.
 
@@ -499,7 +500,7 @@ Die Hauptkrümmungen $H$ sind die Extremwerte der Normalkrümmung.
 \[
     \kappa_{1,2} = H \pm \sqrt{H^2 - K}
 \]
-Die Hauptkrümmungsrichtungen sind immer orthogonal zueinenander (ausgenommen z.B. Nabelpunkte, dort sind alle Richtungen Hauptkrümmungsrichtungen).
+\todo[inline]{Beschreibung Hauptkrümmungsrichtungen, wie berechnet man sie?}
 
 
 
@@ -538,20 +539,17 @@ Parabolischer Flächenpunkt (mind. eine Hauptkrümmung ist $0$):
 \begin{framed}
     Was ist die Dupinsche Indikatrix?
 \end{framed}
-\todo[inline]{Hat das auch jemand so verstanden?}
-So wie ich es verstanden habe:\\
-Wir nehmen die Tangentialebene und schieben sie infitessimal in Richtung und entgegen der Richtung der Normalen. Diese Ebenen schneiden wir dann mit der Fläche. Dadurch erhalten wir Informationen über die Krümmung in Form der Gleichung der Dupinschen Indikatrix.\\
-\\
-Hier die Beschreibung aus dem Skript:\\
+\todo[inline]{WTF ist die Dupinsche Indikatrix?}
 Die zu einer beliebigen Richtung gehörende Normalkrümmung lässt sich durch die Hauptkrümmungen ausdrücken:
 \textit{Zu einem Flächenpunkt, der weder Nabel- noch Flachpunkt ist, gilt für die Normalkrümmung $\kappa_n$ einer Flächenkurve, deren Tangente einen Winkel zur ersten Hauptkrümmungsrichtung hat:}
 \[
     \kappa_n = \kappa_1\, \cos^2 \varphi + \kappa_2\, \sin^2 \varphi
 \]
-Mit $z_1\ \overset{\text{vermutlich}}{=}\ \frac{\cos\varphi}{\sqrt{\kappa_n}}$ und $z_2\ \overset{\text{vermutlich}}{=}\ \frac{\sin\varphi}{\sqrt{\kappa_n}}$ erhalten wir die Gleichung der Dupinschen Indikatrix:
+Mit $z_1 = \frac{\cos\varphi}{\sqrt{\kappa_n}}$ und $z_2 = \frac{\sin\varphi}{\sqrt{\kappa_n}}$ erhalten wir die Gleichung der Dupinschen Indikatrix:
 \[
     \kappa_1\, z_1^2 + \kappa_2\, z_2^2 = \pm 1
 \]
+\todo[inline]{Vor Formel 3.42 im Skript ist wohl Copy-Paste-Fehler...}
 
 
 \begin{framed}
@@ -568,7 +566,7 @@ Bei Rotationsflächen sind die Krümmungslinien die Meridiane und die Breitenkre
 
 
 \begin{framed}
-    Wann sind die Parameterlinien Krümmungslinien (zeigen also in Hauptkrümmungsrichtungen)?
+    Wann sind die Parameterlinien Krümmungslinien?
 \end{framed}
 Wenn:
 \[
@@ -615,9 +613,9 @@ Oberfläche der Kugel
 \begin{framed}
     Was sind Asymptotenlinien?
 \end{framed}
-Richtungen, in denen die Normalkrümmung $0$ ist. Gibt es nur bei hyperbolischen Flächenpunkten.
+\todo[inline]{Was sind Asymptotenlinien?}
 \[
-    \kappa_n = 0
+    e^{i\pi} + 1 = 0
 \]
 
 
@@ -634,8 +632,9 @@ Richtungen, in denen die Normalkrümmung $0$ ist. Gibt es nur bei hyperbolischen
 \begin{framed}
     Was ist die Normalkrümmung einer Asymptotenlinie?
 \end{framed}
+\todo[inline]{Was ist die Normalkrümmung einer Asymptotenlinie?}
 \[
-    \kappa_n = 0
+    e^{i\pi} + 1 = 0
 \]
 
 
@@ -685,28 +684,6 @@ Ein infitessimal kleines Kurvenstück
 
 
 
-\begin{framed}
-    Was ist der Hyperboloid für ein Flächentyp?
-\end{framed}
-\todo[inline]{}
-
-
-
-\begin{framed}
-    Was ist der Kegel für ein Flächentyp? Gib mal ein $\kappa_1$ und ein $\kappa_2$ für einen Kegel an.
-\end{framed}
-Regelfläche. Eine Hauptkrümmung ist $0$.
-
-
-
-\begin{framed}
-    Was ist der Zylinder für ein Flächentyp? Gib mal ein $\kappa_1$ und ein $\kappa_2$ für einen Kegel an.
-\end{framed}
-\todo[inline]{Was ist der Zylinder für ein Flächentyp? Gib mal ein $\kappa_1$ und ein $\kappa_2$ für einen Kegel an.}
-Eine Hauptkrümmung ist $0$.
-
-
-
 
 
 
@@ -721,22 +698,21 @@ Eine Hauptkrümmung ist $0$.
 \begin{framed}
     Gibt es immer zu zulässig vorgegebenen $g_ik$ und $L_ik$ ein Flächenstück?
 \end{framed}
-Nicht ohne Weiteres. Man benötigt weitere Verträglichkeitsbedingungen, die Integrabilitätsbedingungen von Gauß und Mainardi-Codazzi.
+Antwort
+\todo[inline]{Gibt es immer zu zulässig vorgegebenen $g_ik$ und $L_ik$ ein Flächenstück?}
+\[
+    e^{i\pi} + 1 = 0
+\]
 
 
 
 \begin{framed}
     Welche Größen setzen die Ableitungsgleichungen von Gauß in Beziehung?
 \end{framed}
-2. partielle Ableitungen setzen sich also zusammen aus (DGL):
-\begin{itemize}
-    \item 1. partielle Ableitungen
-    \item Christoffel-Symbole 2. Art
-    \item 2. Fundamentalgrößen
-    \item Normalenvektor
-\end{itemize}
+Antwort
+\todo[inline]{Welche Größen setzen die Ableitungsgleichungen von Gauß in Beziehung?}
 \[
-    \underline{X}_{ik} = \Gamma_{ik}^r \, \underline{X}_r + L_{ik} \, \underline{N}
+    e^{i\pi} + 1 = 0
 \]
 
 
@@ -744,21 +720,32 @@ Nicht ohne Weiteres. Man benötigt weitere Verträglichkeitsbedingungen, die Int
 \begin{framed}
     Aus welchen Größen lassen sich die Christoffel-Symbole berechnen?
 \end{framed}
-Aus den 1. Fundamentalgrößen ($g_{ik}$) und deren Ableitungen.
+Antwort
+\todo[inline]{Aus welchen Größen lassen sich die Christoffel-Symbole berechnen?}
+\[
+    e^{i\pi} + 1 = 0
+\]
+
+
+
+\begin{framed}
+    WTF sind Christoffel-Symbole?
+\end{framed}
+Antwort
+\todo[inline]{WTF sind Christoffel-Symbole?}
+\[
+    e^{i\pi} + 1 = 0
+\]
 
 
 
 \begin{framed}
     Welche Größen setzen die Ableitungsgleichungen von Weingarten in Beziehung?
 \end{framed}
-\begin{itemize}
-    \item Ableitung des Normalenvektors \todo[inline]{Was genau ist $\underline{N}_k$?}
-    \item 1. Fundamentalgrößen
-    \item 2. Fundamentalgrößen
-    \item Partielle Ableitung des Flächenstücks
-\end{itemize}
+Antwort
+\todo[inline]{Welche Größen setzen die Ableitungsgleichungen von Weingarten in Beziehung?}
 \[
-    \underline{N}_k = - L_{jk} \, g^{jr} \, \underline{X}_r
+    e^{i\pi} + 1 = 0
 \]
 
 
@@ -777,9 +764,10 @@ Antwort
 \begin{framed}
     Welche Größen stecken im Riemannschen Krümmungstensor?
 \end{framed}
-Zusammenhang zwischen 1. und zweiten Fundamentalgrößen:
+Antwort
+\todo[inline]{Welche Größen stecken im Riemannschen Krümmungstensor?}
 \[
-    R_{ikl}^l = L_{ik} \, L_j^l - L_{ij} \, L_k^l
+    e^{i\pi} + 1 = 0
 \]
 
 
@@ -787,9 +775,10 @@ Zusammenhang zwischen 1. und zweiten Fundamentalgrößen:
 \begin{framed}
     Was sagt uns das Theorema Egregium von Gauß?
 \end{framed}
-\textit{Die Gaußsche Krümmung $K$ ist eine Größe der inneren Flächengeometrie. Sie lässt sich allein aus den $g_{ik}$ und Ableitungen der $g_{ik}$ bestimmen. Es gilt:}
+Antwort
+\todo[inline]{Was sagt uns das Theorema Egregium von Gauß?}
 \[
-    K = \frac{g_{1k}}{g} \, R_{212}^k
+    e^{i\pi} + 1 = 0
 \]
 
 
