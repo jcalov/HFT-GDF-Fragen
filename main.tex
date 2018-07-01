@@ -386,7 +386,7 @@ Gegenbeispiele: Möbiusband, Kleinsche Flasche
 \begin{itemize}
     \item Längen von und Winkel zwischen Flächenkurven
     \item Flächeninhalt
-    \item Lage der Kurve auf einer gegebenen Fläche
+    \item Länge der Kurve auf einer gegebenen Fläche
     \item Gauß-Krümmung: $K = \kappa_1 \cdot \kappa_2$
     \item Christoffel-Symbole 2. Art
 \end{itemize}
@@ -437,7 +437,7 @@ Im Skript:
 \[
 \underline{X}' \qquad \underline{N} \qquad \underline{S}
 \]
-mit $\underline{X}' = \underline{X}_i \, u^{i}'$ und  $\underline{S} = \underline{X}' \times \underline{N}$
+mit $\underline{X}' = \underline{X}_i \, {u^{i}}'$ und  $\underline{S} = \underline{X}' \times \underline{N}$
 
 
 
@@ -589,7 +589,8 @@ Wenn:
 \[
     g_{12} = L_{12} = 0
 \]
-Bei Rotationsflächen sind die Parameterlinien immer Krümmungslinien (Meridiane und Breitenkreis)e.\\
+\\
+Bei Rotationsflächen sind die Parameterlinien immer Krümmungslinien (Meridiane und Breitenkreise).\\
 
 
 
@@ -664,7 +665,7 @@ Parameterlinien sind Asymptotenlinien $\Leftrightarrow L_{11} = L_{22} = 0$.
 
 
 \frage{Wie bekommt man geodätische Linien, kürzeste Wege auf Flächen?}
-
+Durch die Ableitungsgleichungen von Gauß.
 \[
     \kappa_g = 0 
     \qquad\qquad\qquad\qquad
@@ -774,7 +775,7 @@ Die 1. und 2. Fundamentalgrößen sind über die Integrabilitätsbedingungen gek
 
 \frage{Welche Größen stecken im Riemannschen Krümmungstensor?}
 
-Zusammenhang zwischen 1. und zweiten Fundamentalgrößen:
+Zusammenhang zwischen 1. und 2. Fundamentalgrößen:
 \[
     R_{ikl}^l = L_{ik} \, L_j^l - L_{ij} \, L_k^l
 \]
@@ -787,7 +788,7 @@ Zusammenhang zwischen 1. und zweiten Fundamentalgrößen:
 \[
     K = \frac{g_{1k}}{g} \, R_{212}^k
 \]
-$R_{ikl}^l$ ist der Riemmannsche Krümmungstensor.
+$R_{ikl}^l$ ist der Riemannsche Krümmungstensor.
 
 
 
@@ -826,8 +827,8 @@ Hier werden die Erzeugenden entlang geschoben.
 \frage{Wodurch unterscheiden sich Torsen von windschiefen Regelflächen?}
 
 Torse:\\
-Regelfläche, bei der die Tangentialebene in einem beliebigen Flächenpunkt zugleich Tangentialebene in allen anderen Punkten derselben Erzeugenden ist. Torsen haben also keinen Drall ($\frac{d\varphi}{dl}$, Winkeländerung von einem Leitkurvenpunkt zum nächsten).\\
-Eine Fläche ist genau dann Torse, wenn $\det(\underline{L}1, \underline{E}, \underline{E}_1) = 0$ (Torsenbedingung).\\
+Regelfläche, bei der die Tangentialebene in einem beliebigen Flächenpunkt zugleich Tangentialebene in allen anderen Punkten derselben Erzeugenden ist. Torsen haben also keinen Drall ($\frac{d\varphi}{dl}$, Winkeländerung von zwei benachbarten Erzeugenden).\\
+Eine Fläche ist genau dann Torse, wenn $\det(\underline{L}_1, \underline{E}, \underline{E}_1) = 0$ (Torsenbedingung).\\
 \textbf{Torsen sind} entweder \textbf{Zylinder, Kegel oder Tangentenflächen}.\\
 \\
 Windschiefe Regelfläche:\\
@@ -838,9 +839,9 @@ Benachbarte Erzeugende sind stets windschief.
 
 \frage{Welche Eigenschaften haben Striktionspunkte, Striktionslinie?}
 
-Striktionslinie sind die Menge aller Striktionspunkte.\\
+Die Striktionslinie ist die Menge aller Striktionspunkte.\\
 \\
-Striktionspunkt: Die Grenzlage des Lotfußpunktes des Gemeinlots zweier benachbarter Erzeugenden.
+Striktionspunkt: Die Grenzlage der Lotfußpunkte des Gemeinlots zweier benachbarter Erzeugenden.
 
 
 
@@ -866,8 +867,8 @@ Aus der Erzeugenden, der Ableitung und dem Kreuzprodukt der beiden.
 
 
 
-\newpage
-\listoftodos
+%\newpage
+%\listoftodos
 
 
 \end{document}
