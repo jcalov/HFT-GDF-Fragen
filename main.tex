@@ -10,9 +10,9 @@
 \usepackage{amssymb}
 \usepackage{todonotes}
 \usepackage[top=0.2cm, bottom=1.35cm, left=.2cm, right=.2cm]{geometry}
-\usepackage[mark]{gitinfo2}
+\usepackage{jgitinfo}
 
-% Deutsche Anpassungen/Übersetzungen einbinden 
+% Deutsche Anpassungen/Übersetzungen einbinden
 \usepackage[ngerman]{babel}
 
 % Einzug der jeweils ersten Zeile verhindern
@@ -25,7 +25,7 @@
 % Eigene Befehle für die Anordnung als näherungsweise Karteikarten
 \newcommand{\frage}[3][10]{
     \newpage
-    \ 
+    \
     \vspace{#1 em}
     \begin{framed}
         #2
@@ -70,8 +70,8 @@ Kovariante Basis unten, kontravariante Basis oben:
 \[ \underline{g}_{i}\ \underline{g}^{j} = \delta_i^j = E \]
 
 Vektor kann geschrieben werden:
-\[ 
- \underline{v} = v^i \ \underline{g}_i = v_i \ \underline{g}^i 
+\[
+ \underline{v} = v^i \ \underline{g}_i = v_i \ \underline{g}^i
 \]
 
 Die Länge von Vektoren und Winkeln zwischen Vektoren hängen nicht vom gewählten Basissystem ab (Invariante). Daher müssen bei schiefwinkligen Koordinatensystemen zur Berechnung des Skalarproduktes außer den Komponenten die zugehörigen Basisvektoren einbezogen werden.\\
@@ -79,7 +79,7 @@ Die Länge von Vektoren und Winkeln zwischen Vektoren hängen nicht vom gewählt
 Mit $\underline{v} = v^i \ \underline{g}_i$ und $\underline{u} = u^j\ \underline{g}_j$:
 \[
     \underline{v} \cdot \underline{u} = v^i \ \underline{g}_i \cdot u^j\ \underline{g}_j
-    %= v^i\, u^j\ \underline{g}_i \cdot \underline{g}_j 
+    %= v^i\, u^j\ \underline{g}_i \cdot \underline{g}_j
     = v^i\, u^j\, g_{ij}
     = v_i\, u_j\, g^{ij}
     = v_i\, u^j\, g^i_j
@@ -161,7 +161,7 @@ Tensor 3. Stufe: \glqq räumliche Matrix\grqq
 
 Vektorwertige Funktion:
 \[
-\underline{X} : \  I \in \mathbb{R} \to \mathbb{R}^3, \qquad 
+\underline{X} : \  I \in \mathbb{R} \to \mathbb{R}^3, \qquad
 \underline{X}(t) =
  \left(
  \begin{array}{c}
@@ -169,7 +169,7 @@ Vektorwertige Funktion:
  x_2(t)\\
  x_3(t)
  \end{array}
-\right) 
+\right)
 \]
 
 
@@ -301,7 +301,7 @@ Der Hauptnormalenvektor einer Kurve zeigt in Richtung Krüm\-mungs\-krei\-smit\-
 
 Vektorwertige Funktion:
 \[
-\underline{X}: \quad G \in \mathbb{R}^2 \to \mathbb{R}^3, \qquad 
+\underline{X}: \quad G \in \mathbb{R}^2 \to \mathbb{R}^3, \qquad
 \underline{X}(u^1, u^2) =
  \left(
  \begin{array}{c}
@@ -309,7 +309,7 @@ Vektorwertige Funktion:
  x_2(u^1, u^2)\\
  x_3(u^1, u^2)
  \end{array}
-\right) 
+\right)
 \]
 
 
@@ -667,7 +667,7 @@ Parameterlinien sind Asymptotenlinien $\Leftrightarrow L_{11} = L_{22} = 0$.
 \frage{Wie bekommt man geodätische Linien, kürzeste Wege auf Flächen?}
 Durch die Ableitungsgleichungen von Gauß.
 \[
-    \kappa_g = 0 
+    \kappa_g = 0
     \qquad\qquad\qquad\qquad
     \kappa_g  = \underline{X}'' \cdot \underline{S} = \det(\underline{X}', \underline{X}'', \underline{S})
 \]
@@ -733,7 +733,7 @@ Nicht ohne Weiteres. Man benötigt weitere Verträglichkeitsbedingungen, die Int
 Die Ableitungsgleichungen von Gauß setzen
 \begin{itemize}
     \item die ersten partiellen Ableitungen
-    \item die zweiten partiellen Ableitungen 
+    \item die zweiten partiellen Ableitungen
     \item den Normalenvektor
 \end{itemize}
 eines Flächenstücks in Beziehung.
